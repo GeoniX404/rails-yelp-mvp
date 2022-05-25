@@ -1,0 +1,9 @@
+<div style="margin: 20px">
+  <h1>All restaurants</h1>
+    <p class="list-group-item"><%= link_to 'Add new restaurant', '/restaurants/new' %></p>
+  <ul class="list-group">
+    <% @restaurants.each do |restaurant| %>
+      <li class ="list-group-item"><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
+      <% end %>
+  </ul>
+</div>
